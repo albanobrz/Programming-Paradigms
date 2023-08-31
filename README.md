@@ -8,7 +8,7 @@
 
 1. 
 
-
+#### Procedural Paradigm (PP)
 
 ## Declarative Programming
 

@@ -15,3 +15,10 @@ Object-Oriented Programming (OOP) is a programming paradigm that organizes and s
 
 <u>Polymorphism:</u> the method is associated to the class.
  - refactor ugly switch/case statements
+
+
+## Why OOP?
+
+
+
+TODO: see OOP implementation in C, using pointers etc
