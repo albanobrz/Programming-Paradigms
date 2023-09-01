@@ -1,0 +1,7 @@
+There is 3 players in the game.
+Each player gets 2 cards each round.
+Each round, all the players cards are compared, the highest rank wins.
+If the winning rank has more than 1 event, the game is decided by the card suit.
+The suit winning order is this Spades > Hearts > Diamonds > Clubs.
+When the deck runs out of cards, the game is over.
+At the end of the game, who has more rounds won, is the big winner.

@@ -10,10 +10,8 @@ class Deck:
     def drawCard(self):
         card = Card(random.randint(2, 14), self.getRandomSuit())
         for c in self.drawnCards:
-            # if c == 0:
-            #     return
             if card.rank == c.rank and card.suit == c.suit:
-                self.drawCard()
+                return self.drawCard()
         self.totalCards -= 1
         self.cardsDump += 1
         self.deactivateCard(card)
@@ -33,9 +31,6 @@ class Deck:
     
     def deactivateCard(self, card):
         self.drawnCards.append(card)
-
-    def getDrawnCards(self):
-        for card in self.drawnCards:
-            print(card.rank)
-    
-    # def isCardDrawn(self, card, drawnCards)
+            
+    def getTotalCards(self):
+        return print(f"there is {self.totalCards} cards in the deck")

@@ -1,4 +1,5 @@
 from card import Card
+from deck import Deck
 
 class Player:
     def __init__(self, name):
@@ -15,13 +16,13 @@ class Player:
     def getRoundsWon(self):
         return self.roundWins
     
-    def setCards(self, card1, card2):
-        self.card1 = card1
-        self.card2 = card2
+    def setCards(self, deck):
+        self.card1 = deck.drawCard()
+        self.card2 = deck.drawCard()
     
-    def getCards(self):
+    def getCards(self):   
         if self.card1 != None and self.card2 != None:
-            print(self.card1.rank, self.card1.suit, "/", self.card2.rank, self.card2.suit)
+            print(self.card1.cardTranslateRank(), self.card1.suit, "/", self.card2.cardTranslateRank(), self.card2.suit)
             self.setHighestCard()
     
     def setHighestCard(self):
@@ -31,4 +32,6 @@ class Player:
         else:
             self.highestCard = self.card2.rank
             self.highestCardSuit = self.card2.suit
-            
+        
+    def getPlayerName(self):
+        print(self.name)

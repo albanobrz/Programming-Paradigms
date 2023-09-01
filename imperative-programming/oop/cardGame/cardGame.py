@@ -9,48 +9,52 @@ player1 = Player("Bob")
 player2 = Player("Alice")
 player3 = Player("Fred")
 
-player1.setCards(deck.drawCard(), deck.drawCard())
-player2.setCards(deck.drawCard(), deck.drawCard())
-player3.setCards(deck.drawCard(), deck.drawCard())
-
 playersArray.append(player1)
 playersArray.append(player2)
 playersArray.append(player3)
 
-print(player1.name)
-player1.getCards()
+deck.getTotalCards()
 
-print(player2.name)
-player2.getCards()
-
-print(player3.name)
-player3.getCards()
-
-winner = None
-highestCard = 2
-highestCardSuit = "C"
+print("the game will begin...")
 
 def compareSuits(suitOfPlayer, suitOfCurrentHighestCard):
     priority_order = ["A", "H", "D", "C"]
     
     return priority_order.index(suitOfPlayer) < priority_order.index(suitOfCurrentHighestCard)
 
-for player in playersArray:
-    if player.highestCard > highestCard:
-        highestCard = player.highestCard
-        highestCardSuit = player.highestCardSuit
-        winner = player
+while deck.totalCards >= (len(playersArray)*2):
+    input("Press Enter to continue or ctrl+c to exit\n")
     
-    if player.highestCard == highestCard:
-        if compareSuits(player.highestCardSuit, highestCardSuit):
+    for player in playersArray:
+        player.setCards(deck)
+        player.getPlayerName()
+        player.getCards()
+
+    deck.getTotalCards()
+
+    # reset rank
+    winner = None
+    highestRank = 2
+    highestCardSuit = "C"
+
+    for player in playersArray:
+        if player.highestCard > highestRank:
+            highestRank = player.highestCard
             highestCardSuit = player.highestCardSuit
             winner = player
         
-winner.roundWon()
-print(winner.name, highestCard, highestCardSuit, "wins")
+        if player.highestCard == highestRank:
+            if compareSuits(player.highestCardSuit, highestCardSuit):
+                highestCardSuit = player.highestCardSuit
+                winner = player
+            
+    winner.roundWon()
+    
+    print(winner.name, "wins with", Card(highestRank, None).cardTranslateRank(), highestCardSuit)
 
-print("board:", player1.getRoundsWon(), player2.getRoundsWon(), player3.getRoundsWon())
-
-
-# write the rules
-
+    print("board:\n", 
+        player1.name, ":", player1.getRoundsWon(), 
+        player2.name, ":",player2.getRoundsWon(), 
+        player3.name, ":",player3.getRoundsWon())
+    
+print("GG")
