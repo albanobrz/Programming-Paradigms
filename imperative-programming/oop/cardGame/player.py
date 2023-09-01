@@ -35,3 +35,6 @@ class Player:
         
     def getPlayerName(self):
         print(self.name)
+        
+    def getNameAndRoundsWon(self):
+        print(f"{self.name} : {self.getRoundsWon()}")

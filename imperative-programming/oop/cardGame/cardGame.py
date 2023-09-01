@@ -9,6 +9,7 @@ player1 = Player("Bob")
 player2 = Player("Alice")
 player3 = Player("Fred")
 
+
 playersArray.append(player1)
 playersArray.append(player2)
 playersArray.append(player3)
@@ -18,7 +19,7 @@ deck.getTotalCards()
 print("the game will begin...")
 
 def compareSuits(suitOfPlayer, suitOfCurrentHighestCard):
-    priority_order = ["A", "H", "D", "C"]
+    priority_order = ["S", "H", "D", "C"]
     
     return priority_order.index(suitOfPlayer) < priority_order.index(suitOfCurrentHighestCard)
 
@@ -52,9 +53,8 @@ while deck.totalCards >= (len(playersArray)*2):
     
     print(winner.name, "wins with", Card(highestRank, None).cardTranslateRank(), highestCardSuit)
 
-    print("board:\n", 
-        player1.name, ":", player1.getRoundsWon(), 
-        player2.name, ":",player2.getRoundsWon(), 
-        player3.name, ":",player3.getRoundsWon())
+    print("\nboard:") 
+    for player in playersArray:
+        player.getNameAndRoundsWon()
     
 print("GG")
