@@ -18,3 +18,9 @@ class Card:
             cardTranslated = str(self.rank)
         
         return cardTranslated
+    
+    @staticmethod
+    def compareSuits(suitOfPlayer, suitOfCurrentHighestCard):
+        priority_order = ["S", "H", "D", "C"]
+    
+        return priority_order.index(suitOfPlayer) < priority_order.index(suitOfCurrentHighestCard)

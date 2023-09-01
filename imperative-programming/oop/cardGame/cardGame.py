@@ -18,11 +18,6 @@ deck.getTotalCards()
 
 print("the game will begin...")
 
-def compareSuits(suitOfPlayer, suitOfCurrentHighestCard):
-    priority_order = ["S", "H", "D", "C"]
-    
-    return priority_order.index(suitOfPlayer) < priority_order.index(suitOfCurrentHighestCard)
-
 while deck.totalCards >= (len(playersArray)*2):
     input("Press Enter to continue or ctrl+c to exit\n")
     
@@ -45,7 +40,7 @@ while deck.totalCards >= (len(playersArray)*2):
             winner = player
         
         if player.highestCard == highestRank:
-            if compareSuits(player.highestCardSuit, highestCardSuit):
+            if Card.compareSuits(player.highestCardSuit, highestCardSuit):
                 highestCardSuit = player.highestCardSuit
                 winner = player
             
