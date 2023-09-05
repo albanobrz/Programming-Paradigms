@@ -17,8 +17,6 @@ Object-Oriented Programming (OOP) is a programming paradigm that organizes and s
  - refactor ugly switch/case statements
 
 
-## Why OOP?
+## Card Game to ilustrate the concepts
 
-
-
-TODO: see OOP implementation in C, using pointers etc
+[card game](./cardGame/)

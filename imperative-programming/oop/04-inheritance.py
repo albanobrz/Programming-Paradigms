@@ -1,29 +1,29 @@
 # what is inheritance solving?
 # removes redundancy and allow to define relationship between the classes
 
-# class Person:
-#     def __init__(self, firstName, lastname):
-#         self.firstName = firstName
-#         self.lastName = lastname
+class Person:
+    def __init__(self, firstName, lastname):
+        self.firstName = firstName
+        self.lastName = lastname
         
-#     def info(self):
-#         print(f"{self.firstName} {self.lastName}")
+    def info(self):
+        print(f"{self.firstName} {self.lastName}")
 
-# class Employee(Person):
-#     def __init__(self, first, last, id, salary):
-#         self.firstName = first
-#         self.lastName = last
-#         self.employee_id = id
-#         self.salary = salary    
+class Employee(Person):
+    def __init__(self, first, last, id, salary):
+        self.firstName = first
+        self.lastName = last
+        self.employee_id = id
+        self.salary = salary    
     
-#     def info(self):
-#         print(f"{self.firstName} {self.lastName} {self.employee_id} {self.salary}")
+    def info(self):
+        print(f"{self.firstName} {self.lastName} {self.employee_id} {self.salary}")
         
-# p = Person("Leo", "Messi")
-# e = Employee("Fred", "Guedes", 1, 1000)
+p = Person("Leo", "Messi")
+e = Employee("Fred", "Guedes", 1, 1000)
 
-# p.info()
-# e.info()
+p.info()
+e.info()
 
 
 # all the methods, everything, including  __init__ from Person, will be inherited to Employee
@@ -85,7 +85,7 @@ e.info()
 o = object()
 print(dir(o))
 
-# always that Im overriding the original class and duplicated code, I should use super
+# always when overriding the original class and duplicated code, super should be used
 # super gets the call of the original class, its clean and removes duplicated code
 
 # in the code above, everything is being called from the info because:

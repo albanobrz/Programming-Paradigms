@@ -1,7 +1,12 @@
 # magic methods are the methods that all objects(variables) have in python
-# for instance the int 5, has the __add__ method. (dir(5) to see)
+# for instance the int 5, has the __add__ method.
+
+x = 5
+print(dir(x))
+
 # the __add__ is a function that is used in + operator
-# I can use the x = 5 -> x.__add__(1) -> 6
+
+print(x.__add__(1))  # returns 6
 
 class ComplexNumber:
     def __init__(self, real, imag):
@@ -26,7 +31,6 @@ class ComplexNumber:
 
 c1 = ComplexNumber(2, 2)
 c2 = ComplexNumber(2, 2)
-# c3 = c1.add(c2)
 c3 = c1 + c2
 c3.prettyPrint()
 
