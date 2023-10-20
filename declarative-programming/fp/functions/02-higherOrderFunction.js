@@ -1,5 +1,6 @@
-// its basically pass a function as argument to another function or returning a function from a function
-// not all programming languages support this feature
+// A higher order function is basically, pass a function as argument to another function or returning a function from a function
+// Not all programming languages support this feature
+// That means that not all languages has the functional paradigm
 
 function execute(fn, ...params) {
     return fn(...params)

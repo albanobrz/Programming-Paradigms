@@ -1,5 +1,5 @@
-// currying is a base and important comcept on the functional programming
-// it's basically calling a function inside another function
+// Currying is a base and important comcept on the functional programming
+// its basically calling a function inside another function
 
 function sum(a) {
     return function (b) {
@@ -11,8 +11,7 @@ function sum(a) {
 
 console.log(sum(1)(2)(3))
 
-// this way of declaring a function, gives a lot of flexibility
-// another exemple
+// This way of declaring a function, gives a lot of flexibility
 
 // Another exemple with no currying
 function textWithLengthBetween(min, max, err, text) {
@@ -26,8 +25,7 @@ function textWithLengthBetween(min, max, err, text) {
 const p1 = {nome: "A", price: 14.00, desc: 0.2}
 textWithLengthBetween(4, 255, "invalid name", p1.nome)
 
-// with currying
-
+// With currying
 function textWithLengthBetween(min, max, err, text) {
     return function (max) {
         return function(err) {
@@ -44,7 +42,7 @@ function textWithLengthBetween(min, max, err, text) {
 
 textWithLengthBetween(4)(255)("invalid name")(p1.nome)
 
-// even better, reusing the functions
+// Even better, reusing the functions
 
 function applyValidation(fn) {
     return function (value) {

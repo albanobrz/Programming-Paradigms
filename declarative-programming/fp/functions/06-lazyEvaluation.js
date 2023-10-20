@@ -33,5 +33,5 @@ console.log(lazyHelper(200))
 console.log(lazyHelper(300))
 console.timeEnd("#2")
 
-// on the second case, the lazy function uses the lexic context of the previus functions executions
-// so it only has to execute the function inside the function, not everything like on case #1
+// On the second case, the lazy function uses the lexic context of the previus functions executions
+// So it only has to execute the function inside the function, not everything like on case #1

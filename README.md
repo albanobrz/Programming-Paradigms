@@ -4,12 +4,12 @@
 
 ## Imperative Programming
 
-#### Object-Oriented Programming Paradigm (OOP)
+[Object-Oriented Programming Paradigm (OOP)](./imperative-programming/oop/)
 
-1. 
-
-#### Procedural Paradigm (PP)
 
 ## Declarative Programming
 
-#### Functional Programming Paradigm (FP)
+[Functional Programming Paradigm (FP)](./declarative-programming/fp/)
+
+
+#### In the future I will add other paradigms

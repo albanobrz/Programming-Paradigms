@@ -1,5 +1,5 @@
-// closure is when a function "remembers" its origin,
-// even when executed outside of the file
+// Closure is when a function "remembers" its origin
+// Even when executed outside of the file
 
 const sumXPlus3 = require('./closure_scope')
 const out = require('./closure_scope')
@@ -7,8 +7,8 @@ const out = require('./closure_scope')
 const x = 1000
 console.log(sumXPlus3())
 
-// in this case, the function is using the x defined on the other file
-// that is closure
+// In this case, the function is using the x defined on the other file
+// That is closure
 
 
 console.log(out())

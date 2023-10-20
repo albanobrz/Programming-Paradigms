@@ -1,6 +1,6 @@
-// this file is a copy from the 07 file.
+// This file is a copy from the 07 file.
 
-// this function was modified to accept async functions
+// This function was modified to accept async functions
 function composition(...fns) {
     return function (value) {
         return fns.reduce(async (acc, fn) => {

@@ -1,3 +1,5 @@
+// As the file name says, its declaring a bunch of functions to be excecuted in that order
+
 function composition(...fns) {
     return function (value) {
         return fns.reduce((acc, fn) => {

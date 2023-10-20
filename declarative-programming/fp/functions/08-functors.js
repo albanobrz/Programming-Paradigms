@@ -1,5 +1,5 @@
-// functor is an object that implements the map function 
-// it is a "wrapper" of a value 
+// Functor is an object that implements the map function 
+// Tt is a "wrapper" of a value 
 
 const nums = [1, 2, 3, 4, 5, 6]
 
@@ -9,7 +9,7 @@ const newNums = nums
 
 console.log(nums, newNums)
 
-// array is an exemple of functor
+// Array is an exemple of functor
 
 function SecureType(value) {
     return {
@@ -36,4 +36,4 @@ const result = SecureType(firstText)
 
 console.log(firstText, result.value)
 
-// its basically a method that execute a chain of functions
+// Tts basically a method that execute a chain of functions
